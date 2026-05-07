@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>阿嬤a肉粽｜精品手作肉粽禮盒</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Noto Serif TC", "Microsoft JhengHei", serif;
+      background: #f4efe7;
+      color: #2b1b12;
+    }
+
+    .page {
+      width: 100%;
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 24px 18px 60px;
+    }
+
+    /* =========================
+       LOGO 圖片大小調整區
+       調整 max-width 即可
+    ========================= */
+    .logo-box {
+      background: #f4efe7;
+      padding: 22px;
+      text-align: center;
+      margin-bottom: 36px;
+    }
+
+    .logo-box img {
+      width: 100%;
+      max-width: 720px; /* ← LOGO大小調整這裡 */
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .title-section {
+      text-align: center;
+      margin-bottom: 28px;
+    }
+
+    .title-section h1 {
+      font-size: 34px;
+      letter-spacing: 4px;
+      margin: 0 0 12px;
+      color: #8b1e1e;
+    }
+
+    .title-section p {
+      font-size: 17px;
+      line-height: 1.9;
+      margin: 0;
+    }
+
+    /* =========================
+       禮盒主圖大小調整區
+       調整 max-width / height 即可
+    ========================= */
+    .gift-box {
+      text-align: center;
+      margin: 34px auto 48px;
+    }
+
+    .gift-box img {
+      width: 100%;
+      max-width: 620px; /* ← 禮盒主圖寬度調整這裡 */
+      height: 760px;    /* ← 禮盒主圖高度調整這裡 */
+      object-fit: cover;
+      object-position: center;
+      border-radius: 20px;
+      box-shadow: 0 18px 38px rgba(0,0,0,0.22);
+    }
+
+    .section-title {
+      text-align: center;
+      margin: 30px 0 24px;
+    }
+
+    .section-title h2 {
+      font-size: 28px;
+      color: #8b1e1e;
+      letter-spacing: 3px;
+      margin-bottom: 8px;
+    }
+
+    .section-title p {
+      font-size: 16px;
+      color: #5b4536;
+    }
+
+    /* =========================
+       四個單品圖大小調整區
+       card img 的 height 可調整
+    ========================= */
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+      margin-bottom: 48px;
+    }
+
+    .product-card {
+      background: #fffaf2;
+      padding: 14px;
+      border-radius: 18px;
+      box-shadow: 0 10px 26px rgba(0,0,0,0.12);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 430px; /* ← 四個單品圖片高度調整這裡 */
+      object-fit: cover;
+      object-position: center;
+      border-radius: 14px;
+      display: block;
+    }
+
+    .product-card h3 {
+      font-size: 22px;
+      color: #8b1e1e;
+      margin: 16px 0 8px;
+      text-align: center;
+    }
+
+    .product-card p {
+      font-size: 15px;
+      line-height: 1.8;
+      margin: 0;
+      text-align: center;
+      color: #4d3a2f;
+    }
+
+    /* =========================
+       介紹區圖片大小調整區
+    ========================= */
+    .intro-block {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 26px;
+      align-items: center;
+      background: #fffaf2;
+      border-radius: 22px;
+      padding: 24px;
+      margin-bottom: 28px;
+      box-shadow: 0 10px 26px rgba(0,0,0,0.1);
+    }
+
+    .intro-block img {
+      width: 100%;
+      height: 420px; /* ← 介紹區圖片高度調整這裡 */
+      object-fit: cover;
+      object-position: center;
+      border-radius: 16px;
+    }
+
+    .intro-text h2 {
+      color: #8b1e1e;
+      font-size: 26px;
+      margin-top: 0;
+    }
+
+    .intro-text p {
+      font-size: 16px;
+      line-height: 2;
+      color: #3f2e24;
+    }
+
+    .line-section {
+      text-align: center;
+      background: #1f120c;
+      color: #fff;
+      border-radius: 24px;
+      padding: 34px 20px;
+      margin-top: 40px;
+    }
+
+    .line-section h2 {
+      font-size: 28px;
+      margin-top: 0;
+      color: #f5d7a1;
+    }
+
+    /* =========================
+       LINE QR Code 大小調整區
+    ========================= */
+    .line-section img {
+      width: 220px; /* ← LINE QR Code大小調整這裡 */
+      max-width: 80%;
+      border-radius: 16px;
+      background: #fff;
+      padding: 10px;
+      margin: 16px auto;
+      display: block;
+    }
+
+    .order-button {
+      display: inline-block;
+      margin-top: 18px;
+      padding: 14px 34px;
+      background: #8b1e1e;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 999px;
+      font-size: 18px;
+      letter-spacing: 2px;
+    }
+
+    @media (max-width: 768px) {
+      .title-section h1 {
+        font-size: 28px;
+      }
+
+      .gift-box img {
+        height: 520px;
+      }
+
+      .product-grid {
+        grid-template-columns: 1fr;
+        gap: 22px;
+      }
+
+      .product-card img {
+        height: 460px;
+      }
+
+      .intro-block {
+        grid-template-columns: 1fr;
+      }
+
+      .intro-block img {
+        height: 360px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="page">
+
+    <!-- LOGO 圖 -->
+    <section class="logo-box">
+      <img src="C:\Users\amos\Desktop\阿嬤a肉粽\阿嬤a肉粽舊\阿嬤A肉粽_LOGO_橫式 複本.jpg" alt="阿嬤a肉粽 Logo">
+    </section>
+
+    <section class="title-section">
+      <h1>阿嬤a肉粽 精品禮盒</h1>
+      <p>
+        一顆肉粽，一份記憶。<br>
+        嚴選食材、手工包製，把阿嬤廚房裡的溫度，裝進最有心意的禮盒。
+      </p>
+    </section>
+
+    <!-- 禮盒主圖 -->
+    <section class="gift-box">
+      <img src="C:\Users\amos\Desktop\阿嬤a肉粽\阿嬤a肉粽舊\平放肉粽籃_有logo.jpg" alt="阿嬤a肉粽禮盒">
+    </section>
+
+    <section class="section-title">
+      <h2>四款經典口味</h2>
+      <p>海味、肉香、米香交織，送禮自用都體面。</p>
+    </section>
+
+    <!-- 四個單品圖 -->
+    <section class="product-grid">
+
+      <div class="product-card">
+        <img src="C:\Users\amos\Desktop\阿嬤a肉粽\阿嬤a肉粽舊\阿嬤a龍蝦粽_有logo_直式_OK.jpg" alt="龍蝦粽">
+        <h3>龍蝦粽</h3>
+        <p>鮮甜龍蝦入粽，搭配飽滿糯米與古早味配料，奢華又有台味。</p>
+      </div>
+
+      <div class="product-card">
+        <img src="C:\Users\amos\Desktop\阿嬤a肉粽\阿嬤a肉粽舊\阿嬤a干貝粽_有logo_直式_OK.jpg" alt="干貝粽">
+        <h3>干貝粽</h3>
+        <p>干貝鮮香濃郁，米粒吸附海味精華，入口香氣層次分明。</p>
+      </div>
+
+      <div class="product-card">
+        <img src="C:\Users\amos\Desktop\阿嬤a肉粽\阿嬤a肉粽舊\阿嬤a豬肉粽_有logo_直式_OK.jpg" alt="豬肉粽">
+        <h3>豬肉粽</h3>
+        <p>經典古早味肉粽，肥瘦適中、香氣厚實，是記憶裡最熟悉的味道。</p>
+      </div>
+
+      <div class="product-card">
+        <img src="C:\Users\amos\Desktop\阿嬤a肉粽\阿嬤a肉粽舊\阿嬤a鮑魚粽_有logo_直式_OK.jpg" alt="鮑魚粽">
+        <h3>鮑魚粽</h3>
+        <p>鮑魚飽滿厚實，搭配香Q糯米，讓傳統肉粽升級為精品禮盒。</p>
+      </div>
+
+    </section>
+
+    <!-- 介紹區 1 -->
+    <section class="intro-block">
+      <img src="C:\Users\amos\Desktop\阿嬤a肉粽\阿嬤a肉粽舊\肉粽四口味合照_OK.jpg" alt="四口味肉粽合照">
+      <div class="intro-text">
+        <h2>一盒收藏四種心意</h2>
+        <p>
+          從經典豬肉到澎湃海味，每一款都以送禮規格打造。
+          不只是節慶肉粽，更是一份能被記住的台灣味禮盒。
+        </p>
+      </div>
+    </section>
+
+    <!-- 介紹區 2 -->
+    <section class="intro-block">
+      <img src="C:\Users\amos\Desktop\阿嬤a肉粽\阿嬤a肉粽舊\阿嬤包肉粽_有logo_OK.jpg" alt="手作包粽過程">
+      <div class="intro-text">
+        <h2>手工包製，保留家的溫度</h2>
+        <p>
+          從洗粽葉、炒料、拌米到手工包製，每一道工序都不馬虎。
+          讓傳統粽香不只是味道，更是家的記憶。
+        </p>
+      </div>
+    </section>
+
+    <!-- LINE 官方訂購 -->
+    <section class="line-section">
+      <h2>加入 LINE 官方帳號訂購</h2>
+      <p>歡迎洽詢禮盒內容、預購數量與出貨時間。</p>
+      <img src="C:\Users\amos\Desktop\阿嬤a肉粽\阿嬤a肉粽舊\S__18898955.jpg" alt="LINE官方帳號 QR Code">
+
+      <!-- 這裡可以換成你的 LINE 官方連結 -->
+      <a class="order-button" href="#" target="_blank">立即預購</a>
+    </section>
+
+  </main>
+</body>
+</html>
